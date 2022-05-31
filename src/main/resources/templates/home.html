@@ -8,18 +8,18 @@
 <h2>A Simple tool to convert prefix postfix and infix expressions!</h2>
 
 <h3>Enter Expression</h3>
-<textarea>
 
-</textarea>
 <br>
-<label for="expression-types">Choose expression type</label>
 
-<select name="expression-types" id="expression-types">
-    <option value="prefix">Prefix</option>
-    <option value="postfix">postfix</option>
-    <option value="infix">infix</option>
-</select>
+<form action="/output" method="post">
+    <textarea name="text" id="text" class="text"> </textarea>
+    <select name="expression_type" id="expression_type">
+        <option value="prefix" name="prefix">Prefix</option>
+        <option value="postfix" name="postfix">Postfix</option>
+        <option value="infix" name="infix">Infix</option>
+    </select>
+    <input type="submit">
+</form>
 <br>
-<a href="output">Get Output</a>
 </body>
 </html>
