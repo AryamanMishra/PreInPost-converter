@@ -1,18 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 <h2>A Simple tool to convert prefix postfix and infix expressions!</h2>
 
 <h3>Enter Expression</h3>
-
 <br>
-
-<form action="/output" method="post">
-    <textarea name="text" id="text" class="text"> </textarea>
+<form action="/output" method="post" enctype="text/plain">
+    <textarea name="text" id="text" class="text"
+              placeholder="Do not add any paranthesis ans spaces in the expression" rows="10" cols="50"></textarea>
     <select name="expression_type" id="expression_type">
         <option value="prefix" name="prefix">Prefix</option>
         <option value="postfix" name="postfix">Postfix</option>
