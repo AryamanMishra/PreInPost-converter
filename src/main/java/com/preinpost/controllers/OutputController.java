@@ -112,7 +112,7 @@ public class OutputController {
     }
 
 
-    /* Checks if expression is a infix valid expression */
+    /* Checks if expression is a valid infix expression */
     public boolean infix_check(String exp) {
         char last_char = exp.charAt(exp.length() - 1);
         char second_last_char = exp.charAt(exp.length() - 2);
@@ -126,7 +126,7 @@ public class OutputController {
     }
 
 
-    /* Checks if expression is a postfix valid expression */
+    /* Checks if expression is a valid postfix expression */
     public boolean postfix_check(String exp) {
         char last_char = exp.charAt(exp.length() - 1);
         if (operators.contains(last_char))
@@ -135,7 +135,7 @@ public class OutputController {
     }
 
 
-    /* Checks if expression is a prefix valid expression */
+    /* Checks if expression is a valid prefix expression */
     public boolean prefix_check(String exp) {
         char last_char = exp.charAt(exp.length() - 1);
         char second_last_char = exp.charAt(exp.length() - 2);
