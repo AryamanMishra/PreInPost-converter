@@ -6,18 +6,18 @@
 </head>
 <body>
 <h1>Output</h1>
-<p th:if="${check == false}">Invalid <code th:text="${exp_type}"></code> Expression <code th:text="${exp}"></code></p>
-<p th:unless="${check == false}">Valid <code th:text="${exp_type}"></code> Expression</p>
+<p th:if="${check == false}">Invalid <code th:text="${expression_type}"></code> Expression <code th:text="${expression}"></code></p>
+<p th:unless="${check == false}">Valid <code th:text="${expression_type}"></code> Expression</p>
 
-<th:block th:if="${check == true and #strings.equals(exp_type,'infix')}">
-    <h3 th:text="'Entered '  + ${exp_type} + ' expression'"></h3>
-    <textarea th:text="${exp}"></textarea>
+<th:block th:if="${check == true and #strings.equals(expression_type,'infix')}">
+    <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
+    <textarea th:text="${expression}"></textarea>
 
     <h3>Generated Prefix expression</h3>
-    <textarea th:text="${exp}"></textarea>
+    <textarea th:text="${infix_to_prefix}"></textarea>
 
     <h3>Generated Postfix expression</h3>
-    <textarea th:text="${exp}"></textarea>
+    <textarea th:text="${infix_to_postfix}"></textarea>
 
 </th:block>
 </body>
