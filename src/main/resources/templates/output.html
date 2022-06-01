@@ -5,8 +5,20 @@
     <title>Output Page</title>
 </head>
 <body>
-<h1>This is output</h1>
+<h1>Output</h1>
 <p th:if="${check == false}">Invalid <code th:text="${exp_type}"></code> Expression <code th:text="${exp}"></code></p>
-<p th:unless="${check == false}">Valid <code th:text="${exp_type}"></code> Expression <code th:text="${exp}"></code></p>
+<p th:unless="${check == false}">Valid <code th:text="${exp_type}"></code> Expression</p>
+
+<th:block th:if="${check == true and #strings.equals(exp_type,'infix')}">
+    <h3 th:text="'Entered '  + ${exp_type} + ' expression'"></h3>
+    <textarea th:text="${exp}"></textarea>
+
+    <h3>Generated Prefix expression</h3>
+    <textarea th:text="${exp}"></textarea>
+
+    <h3>Generated Postfix expression</h3>
+    <textarea th:text="${exp}"></textarea>
+
+</th:block>
 </body>
 </html>

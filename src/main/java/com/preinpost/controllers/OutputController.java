@@ -19,6 +19,12 @@ import org.springframework.util.MultiValueMap;
 public class OutputController {
 
     List<Character> operators = Arrays.asList('+','-','*','/','^');
+    String infix_to_prefix = "";
+    String infix_to_postfix = "";
+    String prefix_to_infix = "";
+    String prefix_to_postfix = "";
+    String postfix_to_infix = "";
+    String postfix_to_prefix = "";
 
 
     /* Get method for output route */
@@ -40,7 +46,8 @@ public class OutputController {
         exp = exp.toLowerCase();
         String exp_type = getexpType(form);
         exp_type = exp_type.trim();
-        System.out.println(exp + " " + exp_type);
+
+//        System.out.println(exp + " " + exp_type);
 
         if (basic_check(exp)) {
             if (exp_type.equals("infix")) {
@@ -51,6 +58,21 @@ public class OutputController {
                 check = prefix_check(exp);
             }
         }
+
+        if (check == true) {
+            if (exp_type.equals("infix")) {
+//                infix_to_prefix = get_infix_to_prefix(exp);
+//                infix_to_postfix = get_infix_to_postfix(exp);
+            }
+            else if (exp_type.equals("postfix")) {
+
+
+            }
+            else {
+
+            }
+        }
+//        System.out.println(check);
         model.addAttribute("exp", exp);
         model.addAttribute("check",check);
         model.addAttribute("exp_type",exp_type);
