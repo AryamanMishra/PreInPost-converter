@@ -1,5 +1,4 @@
 --add expression checks--
-give output based on check
+--give output based on check--
+make new package for checks and interconversion
 if check is true convert
-
-<--for test-->
