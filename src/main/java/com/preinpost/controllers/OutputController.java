@@ -62,14 +62,17 @@ public class OutputController {
                 check = PrefixCheck.prefix_check(expression);
             }
         }
-//        System.out.println(check);
+        else {
+            check = false;
+        }
+//        System.out.println(expression + " " + check);
 
         if (check) {
-            if (expression.equals("infix")) {
+            if (expression_type.equals("infix")) {
                 infix_to_prefix = Infix_To_Prefix.infix_to_prefix(expression);
                 infix_to_postfix = Infix_To_Postfix.infix_to_postfix(expression);
             }
-            else if (expression.equals("prefix")) {
+            else if (expression_type.equals("prefix")) {
                 prefix_to_infix = Prefix_To_Infix.prefix_to_infix(expression);
                 prefix_to_postfix = Prefix_To_Postfix.prefix_to_postfix(expression);
             }
@@ -82,6 +85,8 @@ public class OutputController {
         model.addAttribute("check",check);
         model.addAttribute("expression", expression);
         model.addAttribute("expression_type",expression_type);
+        model.addAttribute("infix_to_postfix", infix_to_postfix);
+        model.addAttribute("infix_to_prefix", infix_to_prefix);
         return "output";
     }
 

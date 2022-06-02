@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Output Page</title>
+    <title>Output</title>
 </head>
 <body>
 <h1>Output</h1>
@@ -18,6 +18,29 @@
 
     <h3>Generated Postfix expression</h3>
     <textarea th:text="${infix_to_postfix}"></textarea>
+
+</th:block>
+
+<th:block th:if="${check == true and #strings.equals(expression_type,'prefix')}">
+    <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
+    <textarea th:text="${expression}"></textarea>
+
+    <h3>Generated Infix expression</h3>
+    <textarea th:text="${prefix_to_infix}"></textarea>
+
+    <h3>Generated Postfix expression</h3>
+    <textarea th:text="${prefix_to_postfix}"></textarea>
+</th:block>
+
+<th:block th:if="${check == true and #strings.equals(expression_type,'postfix')}">
+    <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
+    <textarea th:text="${expression}"></textarea>
+
+    <h3>Generated Prefix expression</h3>
+    <textarea th:text="${postfix_to_prefix}"></textarea>
+
+    <h3>Generated Infix expression</h3>
+    <textarea th:text="${postfix_to_infix}"></textarea>
 
 </th:block>
 </body>

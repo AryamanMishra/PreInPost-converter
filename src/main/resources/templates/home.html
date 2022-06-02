@@ -12,11 +12,18 @@
 <form action="/output" method="post" enctype="text/plain">
     <textarea name="exp" id="exp" class="exp"
               placeholder="Do not add any parenthesis and spaces in the expression" rows="10" cols="50"></textarea>
+    <br>
+    <br>
+    <label for="expression_type">Select type of expression you have entered</label>
+    <br>
+    <br>
     <select name="&expression_type" id="expression_type">
         <option value="prefix" name="prefix">Prefix</option>
         <option value="postfix" name="postfix">Postfix</option>
         <option value="infix" name="infix">Infix</option>
     </select>
+    <br>
+    <br>
     <input type="submit">
 </form>
 <br>
