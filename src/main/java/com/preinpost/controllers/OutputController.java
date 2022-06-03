@@ -87,6 +87,8 @@ public class OutputController {
         model.addAttribute("expression_type",expression_type);
         model.addAttribute("infix_to_postfix", infix_to_postfix);
         model.addAttribute("infix_to_prefix", infix_to_prefix);
+        model.addAttribute("postfix_to_infix", postfix_to_infix);
+        model.addAttribute("postfix_to_prefix", postfix_to_prefix);
         return "output";
     }
 
