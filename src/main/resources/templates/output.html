@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Output</title>
+    <link th:href="@{/styles/output.css}" rel="stylesheet" />
 </head>
 <body>
 <h1>Output</h1>
@@ -11,36 +12,36 @@
 
 <th:block th:if="${check == true and #strings.equals(expression_type,'infix')}">
     <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
-    <textarea th:text="${expression}"></textarea>
+    <textarea th:text="${expression}" readonly></textarea>
 
     <h3>Generated Prefix expression</h3>
-    <textarea th:text="${infix_to_prefix}"></textarea>
+    <textarea th:text="${infix_to_prefix}" readonly></textarea>
 
     <h3>Generated Postfix expression</h3>
-    <textarea th:text="${infix_to_postfix}"></textarea>
+    <textarea th:text="${infix_to_postfix}" readonly></textarea>
 
 </th:block>
 
 <th:block th:if="${check == true and #strings.equals(expression_type,'prefix')}">
     <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
-    <textarea th:text="${expression}"></textarea>
+    <textarea th:text="${expression}" readonly></textarea>
 
     <h3>Generated Infix expression</h3>
-    <textarea th:text="${prefix_to_infix}"></textarea>
+    <textarea th:text="${prefix_to_infix}" readonly></textarea>
 
     <h3>Generated Postfix expression</h3>
-    <textarea th:text="${prefix_to_postfix}"></textarea>
+    <textarea th:text="${prefix_to_postfix}" readonly></textarea>
 </th:block>
 
 <th:block th:if="${check == true and #strings.equals(expression_type,'postfix')}">
     <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
-    <textarea th:text="${expression}"></textarea>
+    <textarea th:text="${expression}" readonly></textarea>
 
     <h3>Generated Prefix expression</h3>
-    <textarea th:text="${postfix_to_prefix}"></textarea>
+    <textarea th:text="${postfix_to_prefix}" readonly></textarea>
 
     <h3>Generated Infix expression</h3>
-    <textarea th:text="${postfix_to_infix}"></textarea>
+    <textarea th:text="${postfix_to_infix}" readonly></textarea>
 
 </th:block>
 </body>
