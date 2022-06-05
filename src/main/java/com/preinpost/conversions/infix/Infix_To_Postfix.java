@@ -25,16 +25,12 @@ public class Infix_To_Postfix {
                 else {
                     if (operator_precedence.get(ch) > operator_precedence.get(stack.peek()))
                         stack.push(ch);
-                    else if (operator_precedence.get(ch) < operator_precedence.get(stack.peek())) {
+                    else {
                         while (!stack.isEmpty() &&
                                 operator_precedence.get(ch)
-                                        < operator_precedence.get(stack.peek())) {
+                                        <= operator_precedence.get(stack.peek())) {
                             postfix_expression += stack.pop();
                         }
-                        stack.push(ch);
-                    }
-                    else {
-                        postfix_expression += stack.pop();
                         stack.push(ch);
                     }
                 }
@@ -44,4 +40,4 @@ public class Infix_To_Postfix {
             postfix_expression += stack.pop();
         return postfix_expression;
     }
-}
+}   

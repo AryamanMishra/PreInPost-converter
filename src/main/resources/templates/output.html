@@ -37,12 +37,11 @@
     <h3 th:text="'Entered '  + ${expression_type} + ' expression'"></h3>
     <textarea th:text="${expression}" readonly></textarea>
 
-    <h3>Generated Prefix expression</h3>
-    <textarea th:text="${postfix_to_prefix}" readonly></textarea>
-
     <h3>Generated Infix expression</h3>
     <textarea th:text="${postfix_to_infix}" readonly></textarea>
 
+    <h3>Generated Prefix expression</h3>
+    <textarea th:text="${postfix_to_prefix}" readonly></textarea>
 </th:block>
 </body>
 </html>

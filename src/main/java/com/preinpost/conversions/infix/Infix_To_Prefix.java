@@ -27,16 +27,12 @@ public class Infix_To_Prefix {
                 else {
                     if (operator_precedence.get(ch) > operator_precedence.get(stack.peek()))
                         stack.push(ch);
-                    else if (operator_precedence.get(ch) < operator_precedence.get(stack.peek())) {
+                    else  {
                         while (!stack.isEmpty() &&
                                 operator_precedence.get(ch)
-                                        < operator_precedence.get(stack.peek())) {
+                                        <= operator_precedence.get(stack.peek())) {
                             prefix_expression += stack.pop();
                         }
-                        stack.push(ch);
-                    }
-                    else {
-                        prefix_expression += stack.pop();
                         stack.push(ch);
                     }
                 }
