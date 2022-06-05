@@ -1,4 +1,7 @@
 --add expression checks--
 --give output based on check--
-make new package for checks and interconversion
-if check is true convert
+--make new package for checks and interconversion--
+--if check is true convert--
+add bracket support
+improve font
+host
