@@ -14,7 +14,7 @@ public class Postfix_To_Infix {
             else {
                 String b = stack.pop();
                 String a = stack.pop();
-                String element = a + ch + b;
+                String element = '(' + a + ch + b + ')';
                 stack.push(element);
             }
         }
